@@ -1,0 +1,465 @@
+@font-face {
+    font-family: iransans;
+    src: url(../fonts/irsans.ttf);
+}
+
+@keyframes text-fade {
+    from {
+        top: 90%;
+        opacity: .2
+    }
+    to {
+        top: 50%;
+        opacity: 1
+    }
+}
+
+body {
+    background: url("../img/wallpaper.jpg");
+    overflow-x: hidden !important;
+!important;
+    font-family: iransans !important;
+}
+
+/*header section*/
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+    padding-top: 60px;
+}
+
+#header {
+    top: 0px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    margin: 0 9px 0 -5px;
+}
+
+#header .top {
+    position: absolute;
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #d6110b;
+}
+
+#header .top ul {
+    margin: 10px 15px;
+    float: right;
+}
+
+#header .top li {
+    margin: 0 10px;
+    list-style: none;
+    display: inline !important;
+    position: relative;
+}
+
+#header .top li a {
+    color: #ffffff;
+}
+
+#header .bar {
+    z-index: 1000;
+    margin-top: 20px;
+    padding: 14px 25px;
+    background-color: #000;
+    width: 100%;
+    overflow-x: hidden;
+    position: absolute;
+}
+
+#header .bar ul {
+    float: right;
+}
+
+#header .bar li {
+    position: relative;
+    margin: 0 10px;
+    list-style: none;
+    display: inline !important;
+}
+
+#header .bar li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#carouselExampleIndicators {
+    width: 100%;
+    overflow-x: hidden;
+    z-index: 1;
+    position: relative;
+    margin: 87px 9px 0 -5px;
+}
+
+.centered {
+    color: #ffffff;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-animation: text-fade 2s;
+    -o-animation: text-fade 2s;
+    animation: text-fade 2s;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    -o-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+/* content section */
+
+.section {
+    position: relative;
+    padding: 0 0 0 0;
+    right: 20px;
+    margin: 30px;
+}
+
+.section p {
+    color: #ffffff;
+    text-align: justify;
+    direction: rtl;
+    padding: 0 0;
+    margin: 10px 10px;
+}
+
+.section-image {
+    position: relative;
+    margin: 30px 30px;
+
+}
+
+.section-header {
+    color: #ffffff;
+    padding-bottom: 10px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+
+/*content section 2*/
+.all-product {
+    width: 90%;
+    position: relative;
+    padding: 50px;
+    margin: auto;
+}
+
+.all-product .post-wrapper {
+    width: 25%;
+}
+
+.product {
+    position: relative;
+    color: #ffffff;
+    background-color: white;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden !important;
+}
+
+.product-header {
+    color: #ffffff;
+    position: absolute;
+    margin: 0 40%;
+    white-space: nowrap;
+}
+
+.product .post {
+    margin: 20px 60px;
+}
+
+.product .post .post-img :hover + .title {
+    opacity: 1;
+}
+
+.product .post .post-img {
+    margin: 10px;
+    background: #7777774d;
+    border: 1px solid #f1f1f1;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    padding: 20px 30px 0 30px;
+    float: right;
+}
+
+.product .post .title {
+    z-index: 1;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+    opacity: 0;
+    position: relative;
+    top: -35px;
+    width: 250px;
+    overflow: hidden;
+    height: 35px;
+    text-align: center;
+    background-color: #000000d1;
+}
+
+.product .post .title h6 {
+    line-height: 2;
+}
+
+/*footer section*/
+.footer {
+    position: relative;
+    color: #fff;
+    text-align: justify;
+    direction: rtl;
+    margin-top: 15px;
+    background: #000000dd;
+}
+
+.footer-one {
+    padding: 5px 5px;
+    margin: 15px 45px;
+    width: 90%;
+}
+
+.footer-header {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px 0;
+    padding: 10px 0;
+}
+
+.footer-content {
+
+}
+
+.footer-two {
+    padding: 5px 5px;
+    margin: 15px 45px;
+    width: 90%;
+}
+
+.footer-three {
+    padding: 5px 5px;
+    margin: 15px 45px;
+    width: 90%;
+}
+
+table {
+    width: 550px;
+    border: 0;
+    cellpadding: 8;
+    cellspacing: 0;
+}
+
+#submit {
+    font-family: iransans;
+    border-radius: 5px;
+    width: 60%;
+    height: 40px;
+    line-height: 2;
+    background: #007bff;
+}
+
+/*single*/
+.single {
+    position: relative;
+    margin-top: 20px;
+}
+
+.single-img {
+    float: right;
+    margin: 10px 60px;
+}
+
+.single-content {
+    direction: rtl;
+    text-align: justify;
+    color: #fff;
+    padding: 0 10px;
+    margin: 10px 10px;
+}
+
+/*login*/
+.login {
+    border: 3px solid #f1f1f1;
+    width: 500px;
+    height: fit-content;
+    background: white;
+    text-align: center;
+    margin: auto;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.contain {
+    direction: rtl;
+    margin: 5% 25%;
+}
+
+input[placeholder] {
+    font-family: iransans;
+}
+
+button {
+    font-family: iransans !important;
+}
+
+.contain h2 {
+    color: #ffffff;
+    text-align: center;
+    margin: 30px;
+}
+
+.img-size {
+    width: 250px;
+    height: 250px;
+    border: 1px solid #aaaaaa;
+    -webkit-border-radius: 125px;
+    -moz-border-radius: 125px;
+    border-radius: 125px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+
+    .cancelbtn {
+        width: 100%;
+    }
+}
+
+/*admin-page*/
+.admin-bar {
+    margin: 0 10px;
+    color: #ffff;
+    list-style: none;
+    display: inline !important;
+    position: relative;
+    font-size: 20px;
+}
+
+.sign {
+    right: 950px;
+}
+
+.text {
+    padding: 10px;
+}
+
+.admin-content-section {
+    position: absolute;
+    top: 60px;
+    height: fit-content;
+    width: 95%;
+    float: right;
+    background-color: white;
+    border: 1px solid #909090;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.admin-list-menu {
+    position: absolute;
+    top: 60px;
+    height: 500px;
+    width: 100%;
+    right: 15px;
+    border: 1px solid #909090;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background-color: #909090;
+}
+
+.list-menu {
+
+}
+
+.list-item {
+    margin: 5px;
+    display: block;
+    list-style: none;
+    text-align: right;
+    line-height: 2;
+    font-size: 1.5em;
+    padding: 5px 20px;
+}
+
+.content-edit-header {
+    text-align: center;
+    padding: 5px 0;
+}
+
+.edit-content {
+    padding: 25px;
+}
+
+.new-item {
+    text-align: right;
+}
+
+.hr {
+    width: 80%;
+    text-align: center;
+}
+
+.edit-item {
+    text-align: right;
+}
+
+.fetch-item {
+    text-align: right;
+}
+
+.fetch-item {
+    list-style: none;
+}
+
+label {
+    margin: 5px 10px !important;
+}
+
+.btn-default {
+    margin: 0 10px;
+    font-family: iransans;
+}
+
+.pag {
+    list-style: none;
+    position: relative;
+    bottom: -12px;
+    padding: 0 0 2% 30%;
+}
+
+.pag li{
+    padding: 5px 20px;
+    border: 1px solid #b9b3b3;
+    border-radius: 10px;
+    margin: 10px 5px;
+    font-size: 25px;
+    display: inline;
+}
+.pag li a{
+    text-decoration: none;
+    color: #ffffff;
+    margin: auto;
+}

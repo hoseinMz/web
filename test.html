@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
+</head>
+<body>
+<a href="about.php" type="submit" id="btn" value="submit">crd</a>
+<form name="numbers" id="numbers">
+    <input type="text" name="number" id="number">
+</form>
+<div id="summary" style="height: 500px;" >
+    cvjuebcvjki
+    <br>
+</div>
+</body>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#btn").click(function() {
+            var val = $("#number").val();
+            $.ajax ({
+                url: "test.php",
+                Type: "GET",
+                data: { val : val },
+                success: function( result ) {
+                    console.log("Hi, testing");
+                    console.log(val);
+                    $('#summary').html(val);
+                    $("#summary").load('test.php');
+                    $("#summary").load($(this).attr('href'));
+                }
+            });
+        });
+    });
+</script>
+</html>

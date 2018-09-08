@@ -1,0 +1,172 @@
+@font-face {
+    font-family: iransans;
+    src: url(../../fonts/irsans.ttf);
+}
+body {
+    background: url("../../img/wallpaper.jpg");
+    overflow-x: hidden !important;
+!important;
+    font-family: iransans !important;
+}
+#header {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    margin: 0 9px 0 -5px;
+}
+
+#header .top {
+    margin-right: -23px;
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #d6110b;
+}
+
+#header .top ul {
+    margin: 10px 15px;
+    float: right;
+}
+
+#header .top li {
+    margin: 0 10px;
+    list-style: none;
+    display: inline !important;
+    position: relative;
+    float: left;
+}
+
+#header .top li a {
+    color: #ffffff;
+}
+
+
+input[placeholder],input {
+    font-family: iransans;
+}
+.btn-sm{
+    margin: 0 5px;
+}
+button {
+    font-family: iransans !important;
+}
+
+
+
+/*admin-page*/
+.admin-bar {
+    margin: 0 10px;
+    color: #ffff;
+    list-style: none;
+    display: inline !important;
+    position: relative;
+    font-size: 20px;
+}
+
+.sign {
+    right: 900px;
+}
+
+.text {
+    padding: 10px;
+}
+
+.admin-content-section {
+    position: relative;
+    top: 80px;
+    width: 100%;
+    height: fit-content;
+    background-color: white;
+    border: 1px solid #909090;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.admin-list-menu {
+    position: absolute;
+    top: 80px;
+    height: fit-content;
+    width: 100%;
+    right: 5px;
+    border: 1px solid #909090;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background-color: #909090;
+}
+
+.list-item {
+    margin: 5px;
+    display: block;
+    list-style: none;
+    text-align: right;
+    line-height: 2;
+    font-size: 1.2em;
+    padding: 5px 4px;
+}
+
+.content-edit-header {
+    text-align: center;
+    padding: 5px 0;
+}
+
+.edit-content {
+    padding: 5px;
+    margin: 5px;
+}
+
+.new-item {
+    text-align: right;
+}
+
+.hr {
+    width: 80%;
+    text-align: center;
+}
+
+.edit-item {
+    text-align: right;
+}
+
+.fetch-item {
+    text-align: right;
+}
+
+.fetch-item {
+    list-style: none;
+}
+
+label {
+    margin: 5px 10px !important;
+}
+
+.btn-default {
+    margin: 0 10px;
+    font-family: iransans;
+}
+
+.pag {
+    list-style: none;
+    position: relative;
+    bottom: -12px;
+    padding: 0 0 2% 30%;
+}
+
+.pag li{
+    padding: 5px 20px;
+    border: 1px solid #b9b3b3;
+    border-radius: 10px;
+    margin: 10px 5px;
+    font-size: 25px;
+    display: inline;
+}
+.pag li a{
+    text-decoration: none;
+    color: #ffffff;
+    margin: auto;
+}
+.btn-change{
+    font-size:10px!important;
+    font-weight:bold;
+}

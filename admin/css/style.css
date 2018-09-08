@@ -1,0 +1,166 @@
+@font-face {
+    font-family: iransans;
+    src: url(../fonts/irsans.ttf);
+}
+
+
+body {
+    background: url("../img/wallpaper.jpg");
+    overflow-x: hidden !important;
+!important;
+    font-family: iransans !important;
+}
+
+#header {
+    top: 0px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    margin: 0 9px 0 -5px;
+}
+
+#header .top {
+    position: absolute;
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #d6110b;
+}
+
+#header .top ul {
+    margin: 10px 15px;
+    float: right;
+}
+
+#header .top li {
+    margin: 0 10px;
+    list-style: none;
+    display: inline !important;
+    position: relative;
+}
+
+#header .top li a {
+    color: #ffffff;
+}
+
+#header .bar {
+    z-index: 1000;
+    margin-top: 20px;
+    padding: 14px 25px;
+    background-color: #000;
+    width: 100%;
+    overflow-x: hidden;
+    position: absolute;
+}
+
+#header .bar ul {
+    float: right;
+}
+
+#header .bar li {
+    position: relative;
+    margin: 0 10px;
+    list-style: none;
+    display: inline !important;
+}
+
+#header .bar li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/*admin-page*/
+.admin-bar {
+    margin: 0 10px;
+    color: #ffff;
+    list-style: none;
+    display: inline !important;
+    position: relative;
+    font-size: 20px;
+}
+
+.sign {
+    right: 950px;
+}
+
+.text {
+    padding: 10px;
+}
+
+.admin-content-section {
+    position: absolute;
+    top: 60px;
+    height: 500px;
+    width: 95%;
+    float: right;
+    background-color: white;
+    border: 1px solid #909090;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.admin-list-menu {
+    position: absolute;
+    top: 60px;
+    height: 500px;
+    width: 100%;
+    right: 15px;
+    border: 1px solid #909090;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background-color: #909090;
+}
+
+.list-menu {
+
+}
+
+.list-item {
+    margin: 5px;
+    display: block;
+    list-style: none;
+    text-align: right;
+    line-height: 2;
+    font-size: 1.5em;
+    padding: 5px 20px;
+}
+
+.content-edit-header {
+    text-align: center;
+    padding: 5px 0;
+}
+
+.edit-content {
+    padding: 25px;
+}
+
+.new-item {
+    text-align: right;
+}
+
+.hr {
+    width: 80%;
+    text-align: center;
+}
+
+.edit-item {
+    text-align: right;
+}
+
+.fetch-item {
+    text-align: right;
+}
+
+.fetch-item {
+    list-style: none;
+}
+
+label {
+    margin: 5px 10px !important;
+}
+
+.btn-default {
+    margin: 0 10px;
+    font-family: iransans;
+}
