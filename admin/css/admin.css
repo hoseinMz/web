@@ -84,26 +84,27 @@ button {
 }
 
 .admin-list-menu {
-    position: absolute;
+    position: relative;
     top: 80px;
     height: fit-content;
-    width: 100%;
     right: 5px;
     border: 1px solid #909090;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
     background-color: #909090;
+    margin: 0 -15px;
 }
 
 .list-item {
-    margin: 5px;
     display: block;
     list-style: none;
     text-align: right;
     line-height: 2;
     font-size: 1.2em;
-    padding: 5px 4px;
+    padding: 5px 0;
+    margin: 25px 0;
+
 }
 
 .content-edit-header {
@@ -169,4 +170,8 @@ label {
 .btn-change{
     font-size:10px!important;
     font-weight:bold;
+}
+#summary{
+    position: relative;
+    width: 80%;
 }

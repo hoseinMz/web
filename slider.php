@@ -1,38 +1,81 @@
+<?php
+include_once ('config.php');
+function make_query($conn)
+{
+	$query = "SELECT * FROM slider ORDER BY id ASC";
+	$result = mysqli_query($conn, $query);
+	return $result;
+}
+function make_slide_indicators($conn)
+{
+	$output = '';
+	$count = 0;
+	$result = make_query($conn);
+	while($row = mysqli_fetch_array($result))
+	{
+		if($count == 0)
+		{
+			$output .= '
+   <li data-target="#dynamic_slide_show" data-slide-to="'.$count.'" class="active"></li>
+   ';
+		}
+		else
+		{
+			$output .= '
+   <li data-target="#dynamic_slide_show" data-slide-to="'.$count.'"></li>
+   ';
+		}
+		$count = $count + 1;
+	}
+	return $output;
+}
+function make_slides($conn)
+{
+	$output = '';
+	$count = 0;
+	$result = make_query($conn);
+	while($row = mysqli_fetch_array($result))
+	{
+		if($count == 0)
+		{
+			$output .= '<div class="item active">';
+		}
+		else
+		{
+			$output .= '<div class="item">';
+		}
+		$output .= '
+   <img src="'.$row["imgurl"].'" alt="'.$row["alt"].'" />
+   <div class="centered">
+    <h3>'.$row["content"].'</h3>
+   </div>
+  </div>
+  ';
+		$count = $count + 1;
+	}
+	return $output;
+}
+?>
 <div class="row">
     <div class="col">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <div id="dynamic_slide_show" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+			    <?php echo make_slide_indicators($conn); ?>
             </ol>
-            <div class="carousel-inner">
-	            <?php
-	            $sql    = "SELECT imgurl, content,alt FROM slider";
-	            $result = $conn->query( $sql );
 
-	            if ( $result->num_rows > 0 ) {
-		            // output data of each row
-                    $var="active";
-		            while ( $row = $result->fetch_assoc() ) {
-			            ?>
-                        <div class="carousel-item <?php echo $var;?>">
-                            <img class="d-block w-100" src="<?php echo $row['imgurl']; ?>" alt="<?php echo $row['alt']; ?>">
-                            <h2 class="centered "><?php echo $row['content']; ?></h2>
-                        </div>
-			            <?php
-                        $var=" ";
-		            }
-	            } ?>
+            <div class="carousel-inner">
+			    <?php echo make_slides($conn); ?>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <a class="left carousel-control" href="#dynamic_slide_show" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
                 <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+
+            <a class="right carousel-control" href="#dynamic_slide_show" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
                 <span class="sr-only">Next</span>
             </a>
+
         </div>
     </div>
 </div>

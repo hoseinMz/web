@@ -7,7 +7,7 @@ $result = $conn->query( $sql );
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function(){
-        $("#btn").click(function() {
+        $("#social").click(function() {
             var val = $("#number").val();
             $.ajax ({
                 url: "admin.php",
@@ -20,7 +20,46 @@ $result = $conn->query( $sql );
         });
     });
     $(document).ready(function(){
-        $("#bt").click(function() {
+        $("#main-menu").click(function() {
+            var val = $("#number").val();
+            $.ajax ({
+                url: "admin.php",
+                Type: "GET",
+                data: { val : val },
+                success: function( result ) {
+                    $("#summary").load('top_bar.php');
+                }
+            });
+        });
+    });
+    $(document).ready(function(){
+        $("#slider").click(function() {
+            var val = $("#number").val();
+            $.ajax ({
+                url: "admin.php",
+                Type: "GET",
+                data: { val : val },
+                success: function( result ) {
+                    $("#summary").load('slider.php');
+                }
+            });
+        });
+    });
+    $(document).ready(function(){
+        $("#post").click(function() {
+            var val = $("#number").val();
+            $.ajax ({
+                url: "admin.php",
+                Type: "GET",
+                data: { val : val },
+                success: function( result ) {
+                    $("#summary").load('top_bar.php');
+                }
+            });
+        });
+    });
+    $(document).ready(function(){
+        $("#footer").click(function() {
             var val = $("#number").val();
             $.ajax ({
                 url: "admin.php",
@@ -52,15 +91,15 @@ $result = $conn->query( $sql );
     <div class="col-2">
         <div class="admin-list-menu">
             <ul class="list-menu">
-                <li class="list-item"><button id="btn">شبکه های اجتماعی</button></li>
-                <li class="list-item"><button id="bt">منوی اصلی</button></li>
-                <li class="list-item">اسلایدر</li>
-                <li class="list-item">پست ها</li>
-                <li class="list-item">فوتر</li>
+                <li class="list-item"><button class="btn" id="social">شبکه های اجتماعی</button></li>
+                <li class="list-item"><button class="btn" id="main-menu">منوی اصلی</button></li>
+                <li class="list-item"><button class="btn" id="slider">اسلایدر</button></li>
+                <li class="list-item"><button class="btn" id="post">پست ها</button></li>
+                <li class="list-item"><button class="btn" id="footer">فوتر</button></li>
             </ul>
         </div>
     </div>
-    <div id="summary">
+    <div class="col-10" id="summary">
 
     </div>
 	<?php

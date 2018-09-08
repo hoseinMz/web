@@ -9,7 +9,7 @@
         opacity: .2
     }
     to {
-        top: 50%;
+        top: 70%;
         opacity: 1
     }
 }
@@ -90,14 +90,23 @@ body {
     color: #ffffff;
 }
 
-#carouselExampleIndicators {
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    display: block;
+    height: 300px;
+    min-width: 100%;
     width: 100%;
-    overflow-x: hidden;
-    z-index: 1;
-    position: relative;
-    margin: 87px 9px 0 -5px;
+    max-width: 100%;
+    line-height: 1;
 }
-
+.carousel-indicators{
+    margin-left: 21% !important;
+}
+.carousel-indicators li{
+    height: 15px!important;
+}
+.carousel-indicators .active li{
+    height: 17px!important;
+}
 .centered {
     color: #ffffff;
     position: absolute;

@@ -7,31 +7,6 @@ $result = $conn->query( $sql );
 ?>
     <div class="row">
         <div class="col">
-            <nav id="header">
-                <div class="top">
-                    <ul class="admin-bar">
-                        <li class="sign"><a href="#"><i class="fa fa-sign-out fa-lg" data-toggle="tooltip"
-                                                        data-placement="bottom"
-                                                        title="خروج"></i></a></li>
-                        <li class="text">به پنل مدیریتی خوش امدید</li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-2">
-            <div class="admin-list-menu">
-                <ul class="list-menu">
-                    <li class="list-item">شبکه های اجتماعی</li>
-                    <li class="list-item">منو هدر</li>
-                    <li class="list-item">اسلایدر</li>
-                    <li class="list-item">پست ها</li>
-                    <li class="list-item">فوتر</li>
-                </ul>
-            </div>
-        </div>
-        <div class="col">
             <div class="row">
                 <div class="col">
                     <div class="admin-content-section">
@@ -40,7 +15,7 @@ $result = $conn->query( $sql );
                             <div class="edit-content">
                                 <p class="new-item">افزودن ایتم منو جدید</p>
                                 <div>
-                                    <form class="form-inline" action="control-menu.php" method="post">
+                                    <form class="form-inline" action="control-top-bar.php" method="post">
                                         <div class="form-group">
                                             <label for="link"> لینک :</label>
                                             <input type="text" placeholder="link" class="form-control" name="link"
@@ -63,7 +38,7 @@ $result = $conn->query( $sql );
 										while ( $row = $result->fetch_assoc() ) {
 											?>
                                             <div>
-                                                <form class="form-inline" action="control-menu.php" method="post">
+                                                <form class="form-inline" action="control-top-bar.php" method="post">
                                                     <div class="form-group">
                                                         <label for="link"> لینک :</label>
                                                         <input type="text" placeholder="#" name="link"
