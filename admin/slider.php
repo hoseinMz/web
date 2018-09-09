@@ -12,7 +12,7 @@ $result = $conn->query( $sql );
                             <div class="edit-content">
                                 <p class="new-item">افزودن ایتم منو جدید</p>
                                 <div>
-                                    <form class="form-inline" action="control-slider.php" method="post"
+                                    <form class="form-inline" action="control_slider.php" method="post"
                                           enctype="multipart/form-data">
                                         <div class="form-group">
                                             <label for="image"> انتخاب عکس :</label>
@@ -43,7 +43,7 @@ $result = $conn->query( $sql );
 											?>
                                             <div>
                                                 <span class="badge badge-primary"><?php echo $i; ?></span>
-                                                <form class="form-inline" action="control-slider.php" method="post">
+                                                <form class="form-inline" action="control_slider.php" method="post">
                                                     <div class="form-group">
                                                         <label for="link"> عکس :</label>
                                                         <input type="text" placeholder="#" name="link"

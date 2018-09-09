@@ -32,6 +32,9 @@ include_once( 'header.php' ); ?>
                     <button class="btn" id="post">پست ها</button>
                 </li>
                 <li class="list-item">
+                    <button class="btn" id="about">درباره ما</button>
+                </li>
+                <li class="list-item">
                     <button class="btn" id="footer">فوتر</button>
                 </li>
             </ul>

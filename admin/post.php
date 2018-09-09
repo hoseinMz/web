@@ -1,6 +1,5 @@
 <?php
 include_once( 'config.php' );
-include_once( 'header.php' );
 $sql    = "SELECT * FROM post";
 $result = $conn->query( $sql );
 ?>
@@ -13,7 +12,7 @@ $result = $conn->query( $sql );
                     <div class="edit-content">
                         <p class="new-item">افزودن پست جدید</p>
                         <div>
-                            <form class="form-inline" action="control-post.php" method="post"
+                            <form class="form-inline" action="control_post.php" method="post"
                                   enctype="multipart/form-data">
                                 <div class="form-group">
                                     <label for="img-thumb"> انتخاب عکس :</label>
@@ -55,7 +54,7 @@ $result = $conn->query( $sql );
 									?>
                                     <div>
                                         <span class="badge badge-primary"><?php echo $i; ?></span>
-                                        <form class="form-inline" action="control-post.php" method="post">
+                                        <form class="form-inline" action="control_post.php" method="post">
                                             <div class="form-group">
                                                 <label for="img-thumb"> عکس :</label>
                                                 <input type="text" placeholder="لینک عکس" name="img-thumb"

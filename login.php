@@ -8,7 +8,7 @@ include_once( 'header.php' );
             <img src="img/avatar.png" class="img-rounded img-size">
             <div class="form-group">
                 <label for="username">نام کاربری :</label>
-                <input type="username" class="form-control" id="username" placeholder="نام کاربری خود را وارد کنید"
+                <input type="text" class="form-control" id="username" placeholder="نام کاربری خود را وارد کنید"
                        name="username" required>
             </div>
             <div class="form-group">

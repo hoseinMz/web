@@ -58,7 +58,20 @@ $(document).ready(function () {
             Type: "GET",
             data: {val: val},
             success: function () {
-                $("#summary").load('top_bar.php');
+                $("#summary").load('footer_content.php');
+            }
+        });
+    });
+});
+$(document).ready(function () {
+    $("#about").click(function () {
+        let val = $("#number").val();
+        $.ajax({
+            url: "admin.php",
+            Type: "GET",
+            data: {val: val},
+            success: function () {
+                $("#summary").load('about.php');
             }
         });
     });

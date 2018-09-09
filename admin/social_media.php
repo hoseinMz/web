@@ -12,7 +12,7 @@ $result = $conn->query( $sql );
                     <div class="edit-content">
                         <p class="new-item">افزودن ایتم جدید</p>
                         <div>
-                            <form class="form-inline" action="control-social-media.php" method="post">
+                            <form class="form-inline" action="control_social_media.php" method="post">
                                 <div class="form-group">
                                     <label for="link"> لینک :</label>
                                     <input type="text" placeholder="link" class="form-control" name="link" id="link">
@@ -39,7 +39,7 @@ $result = $conn->query( $sql );
 									?>
                                     <div>
                                         <span class="badge badge-primary"><?php echo $i; ?></span>
-                                        <form class="form-inline" action="control-social-media.php" method="post">
+                                        <form class="form-inline" action="control_social_media.php" method="post">
                                             <div class="form-group">
                                                 <a href="<?php echo $row['link']; ?>">
                                                     <i class="<?php echo $row['class']; ?>"

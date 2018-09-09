@@ -1,7 +1,5 @@
 <?php
 include_once( 'config.php' );
-include_once( 'header.php' );
-include_once( 'config.php' );
 $sql    = "SELECT * FROM topbar";
 $result = $conn->query( $sql );
 ?>
@@ -15,7 +13,7 @@ $result = $conn->query( $sql );
                             <div class="edit-content">
                                 <p class="new-item">افزودن ایتم منو جدید</p>
                                 <div>
-                                    <form class="form-inline" action="control-top-bar.php" method="post">
+                                    <form class="form-inline" action="control_top_bar.php" method="post">
                                         <div class="form-group">
                                             <label for="link"> لینک :</label>
                                             <input type="text" placeholder="link" class="form-control" name="link"
@@ -40,7 +38,7 @@ $result = $conn->query( $sql );
 											?>
                                             <div>
                                                 <span class="badge badge-primary"><?php echo $i; ?></span>
-                                                <form class="form-inline" action="control-top-bar.php" method="post">
+                                                <form class="form-inline" action="control_top_bar.php" method="post">
                                                     <div class="form-group">
                                                         <label for="link"> لینک :</label>
                                                         <input type="text" placeholder="#" name="link"
