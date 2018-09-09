@@ -45,7 +45,7 @@ function make_slides($conn)
 			$output .= '<div class="item">';
 		}
 		$output .= '
-   <img src="'.$row["imgurl"].'" alt="'.$row["alt"].'" />
+   <img src="'.base_url.$row["imgurl"].'" alt="'.$row["alt"].'" />
    <div class="centered">
     <h3>'.$row["content"].'</h3>
    </div>

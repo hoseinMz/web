@@ -1,4 +1,13 @@
 <?php
+session_start();
+	print_r($_POST);
+	if(isset($_POST) & !empty($_POST)){
+		if($_POST['captcha'] == $_SESSION['code']){
+			echo "correct captcha";
+		}else{
+			echo "Invalid captcha";
+		}
+	}
 include_once( 'config.php' );
 $usr = mysqli_real_escape_string( $conn, $_POST['username'] );
 $pas = hash( 'sha256', mysqli_real_escape_string($conn, $_POST['password'] ) );

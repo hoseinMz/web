@@ -16,7 +16,7 @@ if ( $result->num_rows > 0 ) {
     <div class="single">
         <div class="col">
             <div class="single-img">
-                <img src="<?php echo $row['singleImg']; ?>" alt="<?php echo $row['alt']; ?>">
+                <img src="<?php echo base_url.$row['singleImg']; ?>" alt="<?php echo $row['alt']; ?>">
             </div>
         </div>
         <div class="col">

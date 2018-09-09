@@ -3,6 +3,7 @@ session_start();
 include_once( 'config.php' );
 include_once( 'header.php' );
 ?>
+
     <div class="contain">
         <h2> نام کاربری و گذرواژه خود را وارد کنید</h2>
         <form action="form-control.php" method="post" class="login" >
@@ -16,10 +17,12 @@ include_once( 'header.php' );
                 <label for="password">رمز ورود :</label>
                 <input type="password" class="form-control" id="password" placeholder="رمز خود را وارد کنید" name="password" required>
             </div>
+            <img src="captcha.php" class="capimg" />
+            <input type="text" name="captcha" />
             <button type="submit" class="btn btn-primary">ورود</button>
             <a  class="btn btn-danger" style="color: white" href="http://localhost:63342/PhpstormProjects/signup.php">ثبت نام</a>
         </form>
-        <img height="70" width="200" src="simple/simplephpcaptcha.php"/>
+
 <?php
 include_once( 'footer.php' );
 ?>
