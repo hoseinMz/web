@@ -38,9 +38,11 @@ $result = $conn->query( $sql );
                                 <div class="fetch-item">
 									<?php
 									if ( $result->num_rows > 0 ) {
+									    $i=1;
 										while ( $row = $result->fetch_assoc() ) {
 											?>
                                             <div>
+                                                <span class="badge badge-primary"><?php echo $i; ?></span>
                                                 <form class="form-inline" action="control-slider.php" method="post">
                                                     <div class="form-group">
                                                         <label for="link"> عکس :</label>
@@ -74,6 +76,7 @@ $result = $conn->query( $sql );
                                                 <hr>
                                             </div>
 											<?php
+                                            $i++;
 										};
 									}; ?>
                                 </div>

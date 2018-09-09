@@ -23,4 +23,3 @@ if ( $_POST['action'] && isset($_POST['id'])) {
 	echo "error";
 }
 
-/*top bar control*/

@@ -34,9 +34,11 @@ $result = $conn->query( $sql );
                         <div class="fetch-item">
 							<?php
 							if ( $result->num_rows > 0 ) {
+							    $i=1;
 								while ( $row = $result->fetch_assoc() ) {
 									?>
                                     <div>
+                                        <span class="badge badge-primary"><?php echo $i; ?></span>
                                         <form class="form-inline" action="control-social-media.php" method="post">
                                             <div class="form-group">
                                                 <a href="<?php echo $row['link']; ?>">
@@ -69,6 +71,7 @@ $result = $conn->query( $sql );
                                         <hr>
                                     </div>
 									<?php
+                                    $i++;
 								};
 							}; ?>
                         </div>
@@ -79,7 +82,6 @@ $result = $conn->query( $sql );
     </div>
 </div>
 </div>
-
 
 
 

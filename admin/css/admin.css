@@ -175,3 +175,7 @@ label {
     position: relative;
     width: 80%;
 }
+textarea{
+    direction: rtl;
+    text-align: justify;
+}
