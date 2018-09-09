@@ -1,4 +1,10 @@
 <?php
+session_start();
+if ($_SESSION["logged"] != true) {
+	echo("Access denied!");
+	exit();
+	header( "Location: index.php" );
+} else {
 include_once( 'config.php' );
 include_once( 'header.php' ); ?>
 <div class="row">
@@ -6,10 +12,10 @@ include_once( 'header.php' ); ?>
         <nav id="header">
             <div class="top">
                 <ul class="admin-bar">
-                    <li class="sign"><a href="#"><i class="fa fa-sign-out fa-lg" data-toggle="tooltip"
-                                                    data-placement="bottom"
-                                                    title="خروج"></i></a></li>
-                    <li class="text">به پنل مدیریتی خوش امدید</li>
+                    <li class="sign"><a href="logout.php"><i class="fa fa-sign-out fa-lg" data-toggle="tooltip"
+                                                             data-placement="bottom"
+                                                             title="خروج"></i></a></li>
+                    <li class="text"><?php echo $_SESSION['name']; ?> به پنل مدیریتی خوش امدید</li>
                 </ul>
             </div>
         </nav>
@@ -41,12 +47,8 @@ include_once( 'header.php' ); ?>
         </div>
     </div>
     <div class="col-10" id="summary">
-
     </div>
 	<?php
-	//include_once( 'social_media.php' );
-	include_once( 'footer.php' ) ?>
-
-
-
-
+	include_once( 'footer.php' );
+	}
+	?>

@@ -6,4 +6,5 @@ include_once( 'slider.php' );
 include_once ('about.php');
 include_once ('post.php');
 include_once( 'footer-content.php' );
+
 ?>

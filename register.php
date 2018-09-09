@@ -1,14 +1,15 @@
 <?php
 include_once( 'config.php' );
+@$username = $_GET['username'];
 @$email = $_GET['email'];
 @$pass1 = $_GET['password1'];
 @$pass2 = $_GET['password2'];
-$password = sha1( $pass1 );
+$password = hash( 'sha256', mysqli_real_escape_string( $conn, $pass1 ) );
 if ( ! isset( $email ) || ! isset( $username ) || ! isset( $pass1 ) || ! isset( $pass2 ) ) {
 	echo "<script>alert('لطفا همه فیلد ها را تکمیل کنید......!!!!! ');window.location.href='signup.php';	</script>";
 } elseif ( $pass1 != $pass2 ) {
 	echo "<script>alert('مقادیر رمز ها یکسان نمی باشند......!!!!! ');window.location.href='signup.php';	</script>";
-} else if ( strlen($pass1) < 8 ) {
+} else if ( strlen( $pass1 ) < 8 ) {
 	echo "<script>alert('کمترین مقدار برای کلمه عبور 8 کاراکتر می باشد ......!!!!! ');window.location.href='signup.php';	</script>";
 } else {
 	$result = $conn->query( "SELECT * FROM user WHERE email='$email'" );

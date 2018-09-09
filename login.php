@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once( 'config.php' );
 include_once( 'header.php' );
 ?>
@@ -18,6 +19,7 @@ include_once( 'header.php' );
             <button type="submit" class="btn btn-primary">ورود</button>
             <a  class="btn btn-danger" style="color: white" href="http://localhost:63342/PhpstormProjects/signup.php">ثبت نام</a>
         </form>
+        <img height="70" width="200" src="simple/simplephpcaptcha.php"/>
 <?php
 include_once( 'footer.php' );
 ?>
