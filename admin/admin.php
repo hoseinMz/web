@@ -1,9 +1,8 @@
 <?php
 session_start();
-if ($_SESSION["logged"] != true) {
-	echo("Access denied!");
+if ( $_SESSION["logged"] != true ) {
+	header( "Location: http://shop.local/" );
 	exit();
-	header( "Location: index.php" );
 } else {
 include_once( 'config.php' );
 include_once( 'header.php' ); ?>

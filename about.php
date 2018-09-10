@@ -1,6 +1,6 @@
 <div class="row">
 	<div class="col">
-		<div class="section-image">
+		<div class="section-image" name="about">
 			<?php
 			$sql    = "SELECT text,headerImg,alt,imgurl,headerText FROM about";
 			$result = $conn->query( $sql );

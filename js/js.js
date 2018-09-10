@@ -3,8 +3,11 @@ $(document).ready(function () {
 });
 
 
+
 // When the user scrolls the page, execute myFunction
-window.onscroll = function() {myFunction()};
+window.onscroll = function () {
+    myFunction()
+};
 
 // Get the navbar
 var navbar = document.getElementById("header");
@@ -21,24 +24,6 @@ function myFunction() {
     }
 }
 
-$("#about","product").click(function() {
-    $("html, body").animate({ scrollTop: $(document).height() }, "slow");
+$("#about", "product").click(function () {
+    $("html, body").animate({scrollTop: $(document).height()}, "slow");
 });​
-
-
-function captcha() {
-    $.ajax({
-        url:'captcha.php',
-        success:function (msg) {
-            $('.capimg').attr('src', 'img/'+msg + '.png');
-        },
-        error:function () {
-            alert('پاسخی دریافت نشد . مجددا تلاش نمایید');
-        }
-    });
-}
-captcha();
-
-$('.capimg').click(function () {
-    captcha();
-});

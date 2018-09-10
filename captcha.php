@@ -3,7 +3,7 @@ session_start();
 header('Content-type: image/png');
 $captcha_num = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890abcdefghijklmnopqrstuvwxyz';
 $captcha_num = substr(str_shuffle($captcha_num),0 , 6);
-$_SESSION["code"] = $captcha_num;
+$_SESSION['code'] = $captcha_num;
 $font = dirname(__FILE__) . '/fonts/captcha.ttf';
 $font_size = 30;
 $img_width = 200;

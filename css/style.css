@@ -20,7 +20,8 @@ body {
 !important;
     font-family: iransans !important;
 }
-
+.fa-lg{font-size: 2.333333em!important;}
+.fa-md{font-size: 1.8em!important;}
 /*header section*/
 .sticky {
     position: fixed;
@@ -34,13 +35,33 @@ body {
 }
 
 #header {
-    top: 0px;
+    top: 0;
     position: fixed;
     width: 100%;
     z-index: 100;
     margin: 0 9px 0 -5px;
 }
-
+#header .is-admin{
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #2e8589;
+    height: fit-content;
+}
+#header .tac{
+    color: black;
+    text-decoration: none;
+    left: -69px;
+    direction: rtl;
+    padding: 5px 50px;
+    line-height: 1.5;
+    font-size: 15px;
+    font-weight: bold;
+}
+#header .tac a{
+    color: black;
+    text-decoration: none;
+}
 #header .top {
     position: absolute;
     width: 100%;
@@ -89,7 +110,9 @@ body {
     text-decoration: none;
     color: #ffffff;
 }
-
+.carousel{
+    padding-top: 100px;
+}
 .carousel-inner > .item > img, .carousel-inner > .item > a > img {
     display: block;
     height: 300px;
@@ -140,6 +163,7 @@ body {
 }
 
 .section p {
+    font-size: 1.8em!important;
     color: #ffffff;
     text-align: justify;
     direction: rtl;
@@ -221,16 +245,19 @@ body {
     width: 250px;
     overflow: hidden;
     height: 35px;
+    color: white;
     text-align: center;
     background-color: #000000d1;
 }
 
-.product .post .title h6 {
+.product .post .title h6{
     line-height: 2;
+    font-size: 1.4em;
 }
 
 /*footer section*/
 .footer {
+    font-size:1.4em;
     position: relative;
     color: #fff;
     text-align: justify;
