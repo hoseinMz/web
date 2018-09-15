@@ -1,9 +1,9 @@
 <?php
-define('base_url', 'http://shop.local/');
+define('base_url', 'http://originalpal.info/');
 $servername = "localhost";
-$database   = "shop";
-$username   = "root";
-$password   = "";
+$database   = "origina9_shop";
+$username   = "origina9_bahman";
+$password   = "bahman13701121";
 
 // Create connection
 $conn = mysqli_connect( $servername, $username, $password, $database );
@@ -21,7 +21,7 @@ if ( isset( $_GET['pageno'] ) ) {
 $no_of_records_per_page = 12;
 $offset                 = ( $pageno - 1 ) * $no_of_records_per_page;
 $total_pages_sql        = "SELECT COUNT(*) FROM post";
-$result                 = $conn->query( $total_pages_sql );
+$result                 = $conn->query( $total_pages_sql);
 $total_rows             = mysqli_fetch_array( $result )[0];
 $total_pages            = ceil( $total_rows / $no_of_records_per_page );
 ?>

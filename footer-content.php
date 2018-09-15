@@ -33,7 +33,7 @@
                     <h5 class="footer-header">
                         ارتباط با ما
                     </h5>
-                    <form action="#" method="post">
+                    <form action="email/mail.php" method="post">
                         <table>
                             <tr>
                                 <td>

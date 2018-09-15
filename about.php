@@ -1,6 +1,6 @@
-<div class="row">
-	<div class="col">
-		<div class="section-image" name="about">
+<div class="row" id="about">
+	<div class="col" >
+		<div class="section-image" name="about" >
 			<?php
 			$sql    = "SELECT text,headerImg,alt,imgurl,headerText FROM about";
 			$result = $conn->query( $sql );
@@ -9,7 +9,7 @@
 			while ( $row = $result->fetch_assoc() ) {
 			?>
 			<h1 class="section-header"><?php echo $row['headerImg']; ?></h1>
-			<img src="<?php echo $row['imgurl']; ?>">
+			<img src="<?php echo $row['imgurl']; ?>" class="img-about">
 		</div>
 	</div>
 	<div class="col">

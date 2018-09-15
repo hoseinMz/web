@@ -499,3 +499,11 @@ label {
     color: #ffffff;
     margin: auto;
 }
+.img-about{
+    margin: 0 0;
+    width: 100%;
+}
+
+input,textarea{
+    color: black!important;
+}

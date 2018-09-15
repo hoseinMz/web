@@ -3,7 +3,7 @@ include_once( 'pagination.php' );
 ?>
 <div class="row">
     <h2 class="product-header" id="middle">دسته بندی محصولات</h2>
-    <div class="all-product">
+    <div class="all-product" id="prod">
         <div class="row row-content">
             <div class="col post-wrapper">
                 <div class="product">

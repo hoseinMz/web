@@ -7,7 +7,7 @@ if ( isset( $_POST ) & ! empty( $_POST ) ) {
 		@$email = $_POST['email'];
 		@$pass1 = $_POST['password1'];
 		@$pass2 = $_POST['password2'];
-		$password = hash( 'sha256', mysqli_real_escape_string( $conn, $pass1 ) );
+		$password = password_hash( $pass1, PASSWORD_DEFAULT );
 		if ( ! isset( $email ) || ! isset( $username ) || ! isset( $pass1 ) || ! isset( $pass2 ) ) {
 			echo "<script>alert('لطفا همه فیلد ها را تکمیل کنید......!!!!! ');window.location.href='register.php';	</script>";
 		} elseif ( $pass1 != $pass2 ) {

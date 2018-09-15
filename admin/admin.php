@@ -1,9 +1,9 @@
 <?php
 session_start();
-if ( $_SESSION["logged"] != true ) {
-	header( "Location: http://shop.local/" );
+if ( $_SESSION["logged"] != true || $_SESSION['access']=='member') {
+	echo "<script>alert('سطح دسترسی شما محدود است');window.location.href='../index.php';</script>";
 	exit();
-} else {
+}
 include_once( 'config.php' );
 include_once( 'header.php' ); ?>
 <div class="row">
@@ -49,5 +49,4 @@ include_once( 'header.php' ); ?>
     </div>
 	<?php
 	include_once( 'footer.php' );
-	}
 	?>

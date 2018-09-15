@@ -3,11 +3,14 @@ session_start();
 ?>
 <div class="row">
     <div class="col">
-        <nav id="header"><?php if (@$_SESSION['logged'] ) { ?>
+        <nav id="header"><?php if ( @$_SESSION['logged'] ) { ?>
                 <div class="is-admin">
                     <div class="tac">
-                        <p ><?php echo $_SESSION['name'] . ' خوش آمدید ' ?>/
-                        <a href="admin/logout.php">خروج</a></p>
+                        <p><?php echo $_SESSION['name'] . ' خوش آمدید ' ?>/
+                            <a href="admin/admin.php"> ورود به صفحه مدیریت </a>/
+                            <a href="admin/logout.php">خروج</a>
+                        </p>
+
                     </div>
                 </div>
 			<?php } ?>
