@@ -10,11 +10,11 @@ $imgurl="upload/" . $newFilename;
 /*main menu control*/
 if ( $_POST['action'] && isset($_POST['id'])) {
 	if ( $_POST['action'] == 'update' ) {
-		$sql = "UPDATE slider SET imgurl='$imgurl',content='$content',alt='$alt' WHERE id='$id'";
+		$sql = "UPDATE slider SET imgurl='$imgurl',content='$content',alt='$alt' WHERE id=i$idd";
 		$conn->query( $sql );
 		echo "successfully update";
 	} elseif ( $_POST['action'] == 'delete' ) {
-		$sql = "DELETE FROM slider WHERE id='$id'";
+		$sql = "DELETE FROM slider WHERE id=i$idd";
 		$conn->query( $sql );
 		echo "successfully delete";
 	}

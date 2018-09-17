@@ -2,10 +2,9 @@
     font-family: iransans;
     src: url(../../fonts/irsans.ttf);
 }
-body {
-    background: url("../../img/wallpaper.jpg");
+body{
+    background-color:#255E69!important;
     overflow-x: hidden !important;
-!important;
     font-family: iransans !important;
 }
 #header {
@@ -20,7 +19,7 @@ body {
     position: relative;
     width: 100%;
     overflow-x: hidden;
-    background-color: #d6110b;
+    background-color: #0F454F;
 }
 
 #header .top ul {
@@ -179,4 +178,12 @@ label {
 textarea{
     direction: rtl;
     text-align: justify;
+}
+
+.clist li{
+    font-size: 15px;
+    list-style: none;
+    display: inline !important;
+    padding: 10px;
+    margin: 0;
 }

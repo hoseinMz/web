@@ -8,7 +8,7 @@ $content2header = $_POST['content2header'];
 /*main menu control*/
 if ( $_POST['action'] ) {
 	if ( $_POST['action'] == 'update' ) {
-		$sql = "UPDATE footer SET content1='$content1',content2='$content2',content1header='$content1header',content2header='$content2header' WHERE id='$id'";
+		$sql = "UPDATE footer SET content1='$content1',content2='$content2',content1header='$content1header',content2header='$content2header' WHERE id=i$idd";
 		$conn->query( $sql );
 		echo "successfully update";
 	} else {

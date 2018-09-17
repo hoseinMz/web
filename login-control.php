@@ -28,6 +28,6 @@ if ( isset( $_POST ) & ! empty( $_POST ) ) {
 		echo "<script>alert('خطا در کد امنیتی وارد شده ');window.location.href='login.php';</script>";
 	}
 }
-//echo "<script>alert('خطا در ارسال اطلاعات ');window.location.href='login.php';</script>";
+echo "<script>alert('خطا در ارسال اطلاعات ');window.location.href='login.php';</script>";
 
 

@@ -11,7 +11,7 @@ $alt = $_POST['alt'];
 $imgurl="upload/" . $newFilename;
 if ( $_POST['action'] ) {
 	if ( $_POST['action'] == 'update' ) {
-		$sql = "UPDATE about SET text='$text',headerImg='$headerImg',headerText='$headerText',alt='$alt' WHERE id='$id'";
+		$sql = "UPDATE about SET text='$text',headerImg='$headerImg',headerText='$headerText',alt='$alt' WHERE id=i$idd";
 		$conn->query( $sql );
 		echo "successfully update";
 	} else {

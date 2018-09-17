@@ -76,3 +76,16 @@ $(document).ready(function () {
         });
     });
 });
+$(document).ready(function () {
+    $("#comment").click(function () {
+        let val = $("#number").val();
+        $.ajax({
+            url: "admin.php",
+            Type: "GET",
+            data: {val: val},
+            success: function () {
+                $("#summary").load('comments.php');
+            }
+        });
+    });
+});

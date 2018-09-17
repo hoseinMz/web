@@ -21,11 +21,9 @@ include_once( 'header.php' );
             <img src="captcha.php"/>
         </div>
         <div class="input-group mb-2">
-            <input type="text" class="form-control" placeholder="کد تولید شده را وارد کنید" name="captcha"/>
             <div class="input-group-prepend">
-                <div class="input-group-text">
+                <input type="text" class="form-control" placeholder="کد تولید شده را وارد کنید" name="captcha"/>
                     <button type="button" id="reCaptcha" class="btn btn-primary btn-md"><i class="fa fa-refresh fa-2x" aria-hidden="true"></i></button>
-                </div>
             </div>
         </div>
         <button type="submit" class="btn btn-primary">ورود</button>

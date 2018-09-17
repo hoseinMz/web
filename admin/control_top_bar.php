@@ -6,11 +6,11 @@ $link  = $_POST['link'];
 /*main menu control*/
 if ( $_POST['action'] && isset($_POST['id'])) {
 	if ( $_POST['action'] == 'update' ) {
-		$sql = "UPDATE topbar SET link='$link',title='$title' WHERE id='$id'";
+		$sql = "UPDATE topbar SET link='$link',title='$title' WHERE id=i$idd";
 		$conn->query( $sql );
 		echo "successfully update";
 	} elseif ( $_POST['action'] == 'delete' ) {
-		$sql = "DELETE FROM topbar WHERE id='$id'";
+		$sql = "DELETE FROM topbar WHERE id=i$idd";
 		$conn->query( $sql );
 		echo "successfully delete";
 	}

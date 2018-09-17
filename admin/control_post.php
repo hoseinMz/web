@@ -16,17 +16,17 @@ $singleImg="upload/" . $single;
 
 if ( $_POST['action'] && isset($_POST['id'])) {
 	if ( $_POST['action'] == 'update' ) {
-		$sql = "UPDATE post SET nam='$name',description='$description', imgUrl='$imgUrl',alt='$alt',singleImg='$singleImg' WHERE id='$id'";
+		$sql = "UPDATE post SET postnam=n$nameame,description='$description', imgUrl='$imgUrl',alt='$alt',singleImg='$singleImg' WHERE id=i$idd";
 		$conn->query( $sql );
 		echo "successfully update";
 	} elseif ( $_POST['action'] == 'delete' ) {
-		$sql = "DELETE FROM post WHERE id='$id'";
+		$sql = "DELETE FROM post WHERE id=i$idd";
 		$conn->query( $sql );
 		echo "successfully delete";
 	}
 } elseif ( $_POST['action'] && ! isset( $_POST['id'] ) ) {
 
-	$sql = "insert into post (nam,description,imgUrl,alt,singleImg) values ('$name','$description','$imgUrl','$alt','$singleImg')";
+	$sql = "insert into post (postnam,description,imgUrl,alt,singleImg) values (n$nameame,'$description','$imgUrl','$alt','$singleImg')";
 	$conn->query( $sql );
 	echo "successfully insert";
 } else {

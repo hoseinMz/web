@@ -34,6 +34,12 @@ session_start();
             <br>
             <div class="bar">
                 <ul>
+                    <li>
+                        <form class="form-inline" action="search.php" method="post">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                            <input class="form-control form-control-sm ml-3 w-75" name="search" type="text" placeholder="Search" aria-label="Search">
+                        </form>
+                    </li>
 					<?php
 					$sql2   = "SELECT link, title FROM topbar";
 					$result = $conn->query( $sql2 );

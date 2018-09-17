@@ -7,11 +7,11 @@ $link  = $_POST['link'];
 /*social media control*/
 if ( $_POST['action'] && isset($_POST['id'])) {
 	if ( $_POST['action'] == 'update' ) {
-		$sql = "UPDATE header SET link='$link',title='$title',class='$class' WHERE id='$id'";
+		$sql = "UPDATE header SET link='$link',title='$title',class='$class' WHERE id=i$idd";
 		$conn->query( $sql );
 		echo "successfully update";
 	} elseif ( $_POST['action'] == 'delete' ) {
-		$sql = "DELETE FROM header WHERE id='$id'";
+		$sql = "DELETE FROM header WHERE id=i$idd";
 		$conn->query( $sql );
 		echo "successfully delete";
 	}

@@ -1,6 +1,6 @@
 <?php
-include_once('config.php');
-include_once('header.php');
+include_once( 'config.php' );
+include_once( 'header.php' );
 ?>
     <div class="contain">
         <h2>فرم ثبت نام</h2>
@@ -30,11 +30,11 @@ include_once('header.php');
                 <img src="captcha.php"/>
             </div>
             <div class="input-group mb-2">
-                <input type="text" class="form-control" placeholder="کد تولید شده را وارد کنید" name="captcha"/>
                 <div class="input-group-prepend">
-                    <div class="input-group-text">
-                        <button type="button" id="reCaptcha" class="btn btn-primary btn-md"><i class="fa fa-refresh fa-2x" aria-hidden="true"></i></button>
-                    </div>
+                    <input type="text" class="form-control" placeholder="کد تولید شده را وارد کنید" name="captcha"/>
+                    <button type="button" id="reCaptcha" class="btn btn-primary btn-md"><i class="fa fa-refresh fa-2x"
+                                                                                           aria-hidden="true"></i>
+                    </button>
                 </div>
             </div>
             <button type="submit" class="btn btn-primary"> ثبت نام</button>
@@ -46,5 +46,5 @@ include_once('header.php');
         </script>
 
 <?php
-include_once('footer.php');
+include_once( 'footer.php' );
 ?>

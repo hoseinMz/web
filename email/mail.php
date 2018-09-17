@@ -63,12 +63,9 @@ function died( $error ) {
 	echo "لطفا برگردید و خطای بوجود امده را اصلاح کنید.<br /><br />";
 	die();
 }
-function clean_string( $string ) {
-	$bad = array( "content-type", "bcc:", "to:", "cc:", "href" );
-	return str_replace( $bad, "", $string );
-}
+
 function insert($name,$email_to,$phone,$comments, $conn ){
-	$sql = "insert into comments (name,email,number,text) values ('$name','$email_to','$phone','$comments')";
+	$sql = "insert into contacts (name,email,number,text) values ($name,'$email_to','$phone',$comments)";
 	$conn->query( $sql );
 }
 ?>
