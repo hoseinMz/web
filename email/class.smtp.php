@@ -710,7 +710,7 @@ class SMTP {
    * the mail transaction is started and then one or more Recipient
    * commands may be called followed by a Data command. This command
    * will send the message to the users terminal if they are logged
-   * in and send them an email.
+   * in and send theme an email.
    *
    * Implements rfc 821: SAML <SP> FROM:<reverse-path> <CRLF>
    *

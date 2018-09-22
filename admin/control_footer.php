@@ -1,5 +1,10 @@
 <?php
-include_once( 'config.php' );
+include_once('config.php');
+session_start();
+if ( $_SESSION["logged"] != true || $_SESSION['access']=='member') {
+    echo "<script>alert('سطح دسترسی شما محدود است');window.location.href='../index.php';</script>";
+    exit();
+}
 $id             = $_POST['id'];
 $content1       = $_POST['content1'];
 $content2       = $_POST['content2'];

@@ -4,24 +4,21 @@ $servername = "localhost";
 $database   = "shop";
 $username   = "root";
 $password   = "";
-
+global $config;
+$config['salt']="AzaZ.09wq@'mxzq[rtQSCVVFR%£erv";
 // Create connection
-$conn = mysqli_connect( $servername, $username, $password, $database );
-mysqli_set_charset( $conn, 'utf8' );
+$conn =mysqli_connect($servername, $username, $password, $database);
+mysqli_set_charset($conn,"utf8");
 // Check connection
-if ( $conn->connect_error ) {
-	die( "Connection failed: " . $conn->connect_error );
+if ($conn->connect_error) {
+	die("Connection failed: " . $conn->connect_error);
+}
+function secure($value) {
+    $value = @trim($value);
+    if (get_magic_quotes_gpc()) {
+        $value = stripslashes($value);
+    }
+    return mysqli_real_escape_string($value);
 }
 
-if ( isset( $_GET['pageno'] ) ) {
-	$pageno = $_GET['pageno'];
-} else {
-	$pageno = 1;
-}
-$no_of_records_per_page = 12;
-$offset                 = ( $pageno - 1 ) * $no_of_records_per_page;
-$total_pages_sql        = "SELECT COUNT(*) FROM post";
-$result                 = $conn->query( $total_pages_sql);
-$total_rows             = mysqli_fetch_array( $result )[0];
-$total_pages            = ceil( $total_rows / $no_of_records_per_page );
 ?>

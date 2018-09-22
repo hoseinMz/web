@@ -1,6 +1,6 @@
 <?php
-include_once( 'config.php' );
-include_once( 'header.php' );
+include_once('config.php');
+include_once('header.php');
 ?>
     <div class="contain">
         <h2>فرم ثبت نام</h2>
@@ -46,5 +46,5 @@ include_once( 'header.php' );
         </script>
 
 <?php
-include_once( 'footer.php' );
+include_once('footer.php');
 ?>

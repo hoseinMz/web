@@ -1,5 +1,5 @@
 <?php
-include_once( '../config.php' );
+include_once('../config.php');
 require_once('class.phpmailer.php');
 if ( isset( $_POST['FromEmailAddress'] ) ) {
 	if ( ! isset( $_POST['Name'] ) ||
@@ -48,7 +48,7 @@ if ( isset( $_POST['FromEmailAddress'] ) ) {
 	$mail->AddAddress($_POST['FromEmailAddress']);
 
 	if(!$mail->Send()) {
-		echo '<script type="text/javascript">alert("خطا رخ داد !!!!:  '.$mail->ErrorInfo.'"); window.location.href="../index.php";</script>';
+		echo '<script type="text/javascript">alert("خطا رخ داد !!!!:  '.$mail->ErrorInfo . '"); window.location.href="../index.php";</script>';
 	} else {
 		echo "<script>alert('پیام شما با موفقیت ارسال شد ');	window.location.href='../index.php';</script>";
 	}

@@ -1,7 +1,11 @@
 <?php
 session_start();
-include_once( 'config.php' );
-include_once( 'header.php' );
+if (@$_SESSION["logged"]==true) {
+    echo "<script>alert('شما قبلا وارد شدید');window.location.href='../index.php';</script>";
+    exit();
+}
+include_once('config.php');
+include_once('header.php');
 ?>
     <div class="contain">
     <h2> نام کاربری و گذرواژه خود را وارد کنید</h2>
@@ -35,5 +39,5 @@ include_once( 'header.php' );
         });
     </script>
 <?php
-include_once( 'footer.php' );
+include_once('footer.php');
 ?>

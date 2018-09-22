@@ -1,5 +1,10 @@
 <?php
-include('config.php');
+include_once('config.php');
+session_start();
+if ( $_SESSION["logged"] != true || $_SESSION['access']=='member') {
+    echo "<script>alert('سطح دسترسی شما محدود است');window.location.href='../index.php';</script>";
+    exit();
+}
 $text=$_POST['text'];
 $headerImg=$_POST['img-header'];
 $headerText=$_POST['massage-header'];

@@ -1,7 +1,8 @@
 <?php
-include_once ('config.php');
+require_once ('config.php');
 if ( isset( $_GET['pageno'] ) ) {
 	$pageno = $_GET['pageno'];
+	secure($pageno);
 } else {
 	$pageno = 1;
 }

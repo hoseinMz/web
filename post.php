@@ -1,5 +1,5 @@
 <?php
-include_once( 'pagination.php' );
+include_once('pagination.php');
 ?>
 <script>
     $(document).ready(function () {
@@ -10,9 +10,9 @@ include_once( 'pagination.php' );
                 Type: 'get',
                 data: {'id': id},
                 success: function (data) {
-                    $("a#"+id).css("display", "none");
-                    jQuery("span#"+id).text(data);
-                    console.log(data);
+                    //$("a#"+id).css("display", "none");
+                        jQuery("span#" + id).text(data);
+                        console.log(data);
                 },
             });
         });

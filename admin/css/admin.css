@@ -106,7 +106,9 @@ button {
     margin: 25px 0;
 
 }
-
+.list-item button{
+    cursor: pointer;
+}
 .content-edit-header {
     text-align: center;
     padding: 5px 0;

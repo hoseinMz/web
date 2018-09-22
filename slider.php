@@ -1,5 +1,5 @@
 <?php
-include_once ('config.php');
+include_once('config.php');
 function make_query($conn)
 {
 	$query = "SELECT * FROM slider ORDER BY id ASC";

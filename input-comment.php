@@ -1,9 +1,3 @@
-<?php
-include_once( 'config.php' );
-include_once( 'header.php' );
-//error_reporting( 0 );
-//ini_set( 'display_errors', 0 );
-?>
 <div class="row">
     <div dir="rtl" class="container" id="comm">
 

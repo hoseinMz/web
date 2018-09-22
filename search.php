@@ -1,8 +1,9 @@
 <?php
-include_once( 'config.php' );
-include_once( 'header.php' );
-include_once( 'header-menu.php' );
+include_once('config.php');
+include_once('header.php');
+include_once('header-menu.php');
 $search = $_POST['search'];
+secure($search);
 $sql    = "SELECT * FROM post WHERE postnam LIKE '%$search%'";
 $result = $conn->query( $sql );
 ?>
@@ -67,5 +68,5 @@ $result = $conn->query( $sql );
 </div>
 </div>
 <?php
-include_once( 'footer-content.php' ); ?>
+include_once('footer-content.php'); ?>
 <!--/.Card-->

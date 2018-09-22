@@ -1,91 +1,11 @@
-$(document).ready(function () {
-    $("#social").click(function () {
-        let val = $("#number").val();
-        $.ajax({
-            url: "admin.php",
-            Type: "GET",
-            data: {val: val},
-            success: function () {
-                $("#summary").load('social_media.php');
-            }
-        });
+function reload(e) {
+    $("#load-section").empty();
+    var id = $(e).attr('id');
+    $.ajax({
+        url: "admin.php",
+        Type: "GET",
+        success: function (data) {
+            $("#load-section").load(id+'.php');
+        }
     });
-});
-$(document).ready(function () {
-    $("#main-menu").click(function () {
-        let val = $("#number").val();
-        $.ajax({
-            url: "admin.php",
-            Type: "GET",
-            data: {val: val},
-            success: function () {
-                $("#summary").load('top_bar.php');
-            }
-        });
-    });
-});
-$(document).ready(function () {
-    $("#slider").click(function () {
-        let val = $("#number").val();
-        $.ajax({
-            url: "admin.php",
-            Type: "GET",
-            data: {val: val},
-            success: function () {
-                $("#summary").load('slider.php');
-            }
-        });
-    });
-});
-$(document).ready(function () {
-    $("#post").click(function () {
-        let val = $("#number").val();
-        $.ajax({
-            url: "admin.php",
-            Type: "GET",
-            data: {val: val},
-            success: function () {
-                $("#summary").load('post.php');
-            }
-        });
-    });
-});
-$(document).ready(function () {
-    $("#footer").click(function () {
-        let val = $("#number").val();
-        $.ajax({
-            url: "admin.php",
-            Type: "GET",
-            data: {val: val},
-            success: function () {
-                $("#summary").load('footer_content.php');
-            }
-        });
-    });
-});
-$(document).ready(function () {
-    $("#about").click(function () {
-        let val = $("#number").val();
-        $.ajax({
-            url: "admin.php",
-            Type: "GET",
-            data: {val: val},
-            success: function () {
-                $("#summary").load('about.php');
-            }
-        });
-    });
-});
-$(document).ready(function () {
-    $("#comment").click(function () {
-        let val = $("#number").val();
-        $.ajax({
-            url: "admin.php",
-            Type: "GET",
-            data: {val: val},
-            success: function () {
-                $("#summary").load('comments.php');
-            }
-        });
-    });
-});
+}

@@ -44,7 +44,7 @@
  * License: LGPL, see PHPMailer License
  *
  * Specifically for PHPMailer to allow POP before SMTP authentication.
- * Does not yet work with APOP - if you have an APOP account, contact Richard Davey
+ * Does not yet work with APOP - if you have an APOP mvc, contact Richard Davey
  * and we can test changes to this script.
  *
  * This class is based on the structure of the SMTP class originally authored by Chris Ryan

@@ -1,10 +1,13 @@
 <?php
 session_start();
-include_once( 'config.php' );
+include_once('config.php');
 if ( isset( $_POST ) & ! empty( $_POST ) ) {
-	if ( $_POST['captcha'] == $_SESSION['code'] ) {
-		$usr    = mysqli_real_escape_string( $conn, $_POST['username'] );
-		$pass1  = $_POST['password'];
+	if (secure($_POST['captcha']) == secure($_SESSION['code'])) {
+		$usr = $_POST['username'];
+        secure($usr);
+        $pass1  = $_POST['password'];
+        secure($pass1);
+		$pass1=$config['salt'].$pass1.$config['salt'];
 		$sql    = "SELECT * FROM user WHERE name='$usr'";
 		$result = $conn->query( $sql );
 		if ( $result->num_rows >= 1 ) {

@@ -1,12 +1,13 @@
 <?php
-include_once( 'config.php' );
-include_once( 'header.php' );
-include_once( 'header-menu.php' );
-include_once( 'slider.php' );
-include_once( 'jdf.php' );
+include_once('config.php');
+include_once('header.php');
+include_once('header-menu.php');
+include_once('slider.php');
+include_once('jdf.php');
 error_reporting( 0 );
 ini_set( 'display_errors', 0 );
-$id     = $_GET['post'];
+$id= $_GET['post'];
+secure($id);
 $sql    = "SELECT postnam,description,singleImg,alt FROM post WHERE id=$id";
 $result = $conn->query( $sql );
 if ( $result->num_rows > 0 ) {
@@ -33,8 +34,8 @@ if ( $result->num_rows > 0 ) {
 
 
 <?php
-include_once ('input-comment.php');
-include_once( 'comments.php' );
-include_once( 'footer-content.php' );
-include_once( 'footer.php' );
+include_once('input-comment.php');
+include_once('comments.php');
+include_once('footer-content.php');
+include_once('footer.php');
 ?>
