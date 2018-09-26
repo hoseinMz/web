@@ -50,10 +50,9 @@ $result = $conn->query( $sql );
                                                 <span class="badge badge-primary"><?php echo $i; ?></span>
                                                 <form class="form-inline" action="control_slider.php" method="post">
                                                     <div class="form-group">
-                                                        <label for="link"> عکس :</label>
-                                                        <input type="text" placeholder="#" name="link"
-                                                               class="form-control " id="link"
-                                                               value="<?php echo $row['imgurl']; ?>">
+                                                        <img src="<?php echo '/' . $row['imgurl']; ?>"
+                                                             class="form-control"
+                                                             style="height: 100px!important;width: 100px!important;">
                                                     </div>
                                                     <br>
                                                     <div class="form-group">

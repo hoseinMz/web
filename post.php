@@ -31,7 +31,7 @@ include_once('pagination.php');
                         <div class="card card-cascade card-ecommerce" style="width: 40rem;margin: 10px 0;">
                             <div class="card card-cascade card-ecommerce">
                                 <div class="view view-cascade overlay">
-                                    <img class="card-img-top" src="<?php echo $row['imgUrl']; ?>"
+                                    <img class="card-img-top" src="<?php echo $row['thumb_img']; ?>"
                                          alt="<?php echo $row['alt']; ?>">
                                     <a>
                                         <div class="mask rgba-white-slight"></div>

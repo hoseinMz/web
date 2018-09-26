@@ -15,12 +15,19 @@
 }
 
 body {
-    background-color:#f2f2f2!important;
+    background-color: #f2f2f2 !important;
     overflow-x: hidden !important;
     font-family: iransans !important;
 }
-.fa-lg{font-size: 2.333333em!important;}
-.fa-md{font-size: 1.8em!important;}
+
+.fa-lg {
+    font-size: 2.333333em !important;
+}
+
+.fa-md {
+    font-size: 1.8em !important;
+}
+
 /*header section*/
 .sticky {
     position: fixed;
@@ -40,17 +47,19 @@ body {
     z-index: 100;
     margin: 0 9px 0 -5px;
 }
-#header .is-admin{
+
+#header .is-admin {
     text-align: right;
-    color: #ffffff!important;
+    color: #ffffff !important;
     position: relative;
     width: 100%;
     overflow-x: hidden;
     background-color: #0F454F;
     height: fit-content;
 }
-#header .tac{
-    color: #ffffff!important;
+
+#header .tac {
+    color: #ffffff !important;
     text-decoration: none;
     left: -69px;
     direction: rtl;
@@ -59,10 +68,12 @@ body {
     font-size: 15px;
     font-weight: bold;
 }
-#header .tac a{
-    color: #ffffff!important;
+
+#header .tac a {
+    color: #ffffff !important;
     text-decoration: none;
 }
+
 #header .top {
     position: absolute;
     width: 100%;
@@ -112,12 +123,15 @@ body {
     text-decoration: none;
     color: #ffffff;
 }
-#header .bar li i{
+
+#header .bar li i {
     color: white;
 }
-.carousel{
+
+.carousel {
     padding-top: 100px;
 }
+
 .carousel-inner > .item > img, .carousel-inner > .item > a > img {
     display: block;
     height: 300px;
@@ -126,15 +140,20 @@ body {
     max-width: 100%;
     line-height: 1;
 }
-.carousel-indicators{
-    margin-left: 21% !important;
+
+.carousel-indicators {
+
 }
-.carousel-indicators li{
-    height: 15px!important;
+
+.carousel-indicators li {
+    height: 15px !important;
+    width: 15px!important;
 }
-.carousel-indicators .active li{
-    height: 17px!important;
+
+.carousel-indicators .active li {
+    height: 17px !important;
 }
+
 .centered {
     color: #ffffff;
     position: absolute;
@@ -169,7 +188,7 @@ body {
 }
 
 .section p {
-    font-size: 1.2em!important;
+    font-size: 1.2em !important;
 
     text-align: justify;
     direction: rtl;
@@ -181,9 +200,9 @@ body {
     position: relative;
     margin: 30px 30px;
 
-
 }
-.section-image img{
+
+.section-image img {
     -webkit-border-radius: 40px;
     -moz-border-radius: 40px;
     border-radius: 40px;
@@ -197,7 +216,7 @@ body {
 
 /*footer section*/
 .footer {
-    font-size:1.1em;
+    font-size: 1.1em;
     position: relative;
     color: #fff;
     text-align: justify;
@@ -242,9 +261,11 @@ table {
     cellpadding: 8;
     cellspacing: 0;
 }
-table label,input{
-    font-size: 1.4em!important;
+
+table label, input {
+    font-size: 1.4em !important;
 }
+
 #submit {
     font-family: iransans, serif;
     border-radius: 5px;
@@ -264,7 +285,8 @@ table label,input{
     float: right;
     margin: 10px 60px;
 }
-.single-img img{
+
+.single-img img {
     -webkit-border-radius: 40px;
     -moz-border-radius: 40px;
     border-radius: 40px;
@@ -303,7 +325,7 @@ input[placeholder] {
 }
 
 button {
-    font-family: iransans, serif !important ;
+    font-family: iransans, serif !important;
 }
 
 .contain h2 {
@@ -320,10 +342,12 @@ button {
     -moz-border-radius: 125px;
     border-radius: 125px;
 }
-#middle{
+
+#middle {
     direction: rtl;
-    margin: 15px 38%!important;
+    margin: 15px 38% !important;
 }
+
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
     span.psw {
@@ -442,7 +466,7 @@ label {
     padding: 0 0 2% 30%;
 }
 
-.pag li{
+.pag li {
     padding: 5px 20px;
     border: 1px solid #b9b3b3;
     border-radius: 10px;
@@ -450,48 +474,55 @@ label {
     font-size: 25px;
     display: inline;
 }
-.pag li a{
+
+.pag li a {
     text-decoration: none;
     margin: auto;
 }
-.img-about{
+
+.img-about {
     margin: 0 0;
     width: 100%;
 }
-.prode{
+
+.prode {
     height: fit-content;
-    margin: 0 3%!important;
+    margin: 0 3% !important;
 }
-input,textarea{
-    color: black!important;
+
+input, textarea {
+    color: black !important;
 }
-.card-footer{
-    padding: 0.2rem 1.25rem!important;
+
+.card-footer {
+    padding: 0.2rem 1.25rem !important;
 }
-.card-com{
+
+.card-com {
     width: 100%;
 }
 
-.cart-com-row{
+.cart-com-row {
     background-color: white;
     border: 1px solid;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     border-radius: 20px;
     padding: 15px;
-    margin: 20px 5%!important;
+    margin: 20px 5% !important;
     direction: rtl;
     text-align: justify;
     width: 90%;
     float: right;
     font-size: medium;
 }
+
 .img-fluid {
     padding: 0 31px;
 }
 
-#wrap{
-    background-color:white;
+#wrap {
+    background-color: white;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     border-radius: 20px;
@@ -504,7 +535,8 @@ input,textarea{
     padding-bottom: 50px;
 
 }
-h3.heading{
+
+h3.heading {
     margin-left: 20px;
     background-color: #fafafa;
     font-size: 25px;
@@ -515,34 +547,39 @@ h3.heading{
     height: 40px;
 
 }
-#upper_blank{
+
+#upper_blank {
     border-bottom: 7px solid steelblue;
     margin-top: 35px;
     width: 590px;
 
 }
-#name{
+
+#name {
     margin-left: 20px;
     box-shadow: 0 2px 0 #e6e6e6;
     height: 40px;
     padding-left: 10px;
     width: 500px;
 }
-#email-com{
+
+#email-com {
     margin-left: 20px;
     box-shadow: 0 2px 0 #e6e6e6;
     height: 40px;
     padding-left: 10px;
     width: 500px;
 }
-#comment{
+
+#comment {
     margin-left: 20px;
     box-shadow: 0 2px 0 #e6e6e6;
     padding-left: 10px;
     width: 650px;
     height: 200px;
 }
-#commentSubmit{
+
+#commentSubmit {
     margin-left: 20px;
     width: 250px;
     height: 55px;
@@ -554,29 +591,115 @@ h3.heading{
     padding-left: 20px;
     border-radius: 5px;
 }
+
 #commentSubmit:hover {
     background-color: #09466f;
 
 }
-#commentform{
+
+#commentform {
     margin: 10px;
 }
-#commentform input{
+
+#commentform input {
     padding: 10px 50px;
     margin: 10px 20px;
 }
-#commentform textarea{
+
+#commentform textarea {
     padding: 10px 50px;
     margin: 10px 20px;
 }
-#comm p{
+
+#comm p {
     padding: 8px 8px 8px 20px;
     margin: 5px 40%;
     color: red;
 }
-#main{
+
+#main {
     margin: 15px;
 }
-.result{
+
+.result {
     margin: 15% 35% 5% 35%;
+}
+
+#dropdownMenuLink, .dropdown-menu {
+    width: 100%;
+}
+
+.dropdown-menu {
+    display: none;
+}
+
+#dropdownMenuLink:active + .dropdown-menu {
+    display: block;
+}
+
+.show > .dropdown-menu {
+    display: none;
+}
+
+/*responsive design */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    #header .bar {
+        display: none;
+    }
+
+    #dropdownMenuLink, .dropdown-menu {
+        margin-top: 18px;
+    }
+
+    #header .top {
+        font-size: 10px;
+    }
+    .carousel {
+        padding-top: 71px;
+    }
+    .carousel-indicators {
+        left:0!important;
+    }
+    .centered{
+        font-size: 10px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    #header .bar {
+        display: none;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    #header .bar {
+        display: block;
+    }
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    #dropdownMenuLink, .dropdown-menu {
+        display: none;
+    }
+
+    #header .bar {
+        display: block;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    #dropdownMenuLink, .dropdown-menu {
+        display: none!important;
+    }
+
+    #header .bar {
+        display: block;
+    }
+
 }

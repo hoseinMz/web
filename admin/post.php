@@ -1,12 +1,13 @@
 <?php
 include_once('config.php');
+include_once('header.php');
 session_start();
-if ( $_SESSION["logged"] != true || $_SESSION['access']=='member') {
+if ($_SESSION["logged"] != true || $_SESSION['access'] == 'member') {
     echo "<script>alert('سطح دسترسی شما محدود است');window.location.href='../index.php';</script>";
     exit();
 }
-$sql    = "SELECT * FROM post";
-$result = $conn->query( $sql );
+$sql = "SELECT * FROM post";
+$result = $conn->query($sql);
 ?>
 <div class="col">
     <div class="row">
@@ -17,17 +18,13 @@ $result = $conn->query( $sql );
                     <div class="edit-content">
                         <p class="new-item">افزودن پست جدید</p>
                         <div>
-                            <form class="form-inline" action="control_post.php" method="post"
+                            <form class="form-inline" method="post" action="control_post.php"
                                   enctype="multipart/form-data">
-                                <div class="form-group">
-                                    <label for="img-thumb"> انتخاب عکس :</label>
-                                    <input type="file" class="form-control-file" name="img-thumb" id="img-thumb">
-                                </div>
                                 <div class="form-group">
                                     <label for="name">نام :</label>
                                     <input type="text" placeholder="نام را وارد کنید " class="form-control"
                                            name="name"
-                                           id="content">
+                                           id="name">
                                 </div>
                                 <div class="form-group">
                                     <label for="alt"> متن alt:</label>
@@ -36,8 +33,16 @@ $result = $conn->query( $sql );
                                            id="alt">
                                 </div>
                                 <div class="form-group">
-                                    <label for="img-single"> انتخاب عکس بزرگ :</label>
-                                    <input type="file" class="form-control-file" name="img-single" id="img-single">
+                                    <label for="category">category :</label>
+                                    <input type="text" placeholder="category" name="category"
+                                           class="form-control"
+                                           id="category">
+                                </div>
+                                <div class="form-group">
+                                    <label for="price">price :</label>
+                                    <input type="text" placeholder="price" name="price"
+                                           class="form-control"
+                                           id="price">
                                 </div>
                                 <div class="form-group">
                                     <label for="description">توضیحات :</label>
@@ -46,69 +51,83 @@ $result = $conn->query( $sql );
                                               id="description">
 												</textarea>
                                 </div>
-                                <input type="submit" class="btn btn-default" name="action" value="add">
+                                <div class="form-group">
+                                    <label for="img-thumb"> انتخاب عکس :</label>
+                                    <input type="file" class="form-control-file" name="img" id="img-thumb">
+                                </div>
+                                <input type="submit" class="btn btn-primary" name="action" value="add">
                             </form>
                         </div>
-                        <hr class="hr">
-                        <p class="edit-item">ایتم های موجود</p>
-                        <div class="fetch-item">
-							<?php
-							if ( $result->num_rows > 0 ) {
-							    $i=1;
-								while ( $row = $result->fetch_assoc() ) {
-									?>
-                                    <div>
-                                        <span class="badge badge-primary"><?php echo $i; ?></span>
-                                        <form class="form-inline" action="control_post.php" method="post">
-                                            <div class="form-group">
-                                                <label for="img-thumb"> عکس :</label>
-                                                <input type="text" placeholder="لینک عکس" name="img-thumb"
-                                                       class="form-control " id="img-thumb"
-                                                       value="<?php echo $row['imgUrl']; ?>">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="img-single"> عکس بزرگ :</label>
-                                                <input type="text" placeholder="لینک عکس" name="img-single"
-                                                       class="form-control " id="img-single"
-                                                       value="<?php echo $row['singleImg']; ?>">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="name">نام :</label>
-                                                <input type="text" placeholder="sign" name="name"
-                                                       class="form-control"
-                                                       id="name"
-                                                       value="<?php echo $row['nam']; ?>">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="alt">alt :</label>
-                                                <input type="text" placeholder="sign" name="alt"
-                                                       class="form-control"
-                                                       id="alt"
-                                                       value="<?php echo $row['alt']; ?>">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="description">توضیحات :</label>
-                                                <textarea placeholder="توضیحات" name="description" cols="55" rows="7"
-                                                          class="form-control"
-                                                          id="description">
+                    </div>
+                    <hr class="hr">
+                    <p class="edit-item">ایتم های موجود</p>
+                    <div class="fetch-item">
+                        <?php
+                        if ($result->num_rows > 0) {
+                            $i = 1;
+                            while ($row = $result->fetch_assoc()) {
+                                ?>
+                                <div id="<?php echo $row['id']; ?>">
+                                    <span class="badge badge-primary"><?php echo $i; ?></span>
+                                    <div class="form-inline">
+                                        <div class="form-group" id="theForm">
+                                            <img src="<?php echo '/' . $row['thumb_img']; ?>"
+                                                 class="form-control"
+                                                 style="height: 100px!important;width: 100px!important;">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="name">نام :</label>
+                                            <input type="text" placeholder="sign" name="name"
+                                                   class="form-control"
+                                                   id="name<?php echo $row['id']; ?>"
+                                                   value="<?php echo $row['postnam']; ?>">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="alt">alt :</label>
+                                            <input type="text" placeholder="sign" name="alt"
+                                                   class="form-control"
+                                                   id="alt<?php echo $row['id']; ?>"
+                                                   value="<?php echo $row['alt']; ?>">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="category">category :</label>
+                                            <input type="text" placeholder="category" name="category"
+                                                   class="form-control"
+                                                   id="category<?php echo $row['id']; ?>"
+                                                   value="<?php echo $row['category']; ?>">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="price">price :</label>
+                                            <input type="text" placeholder="price" name="price"
+                                                   class="form-control"
+                                                   id="price<?php echo $row['id']; ?>"
+                                                   value="<?php echo $row['price']; ?>">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="description">توضیحات :</label>
+                                            <textarea placeholder="توضیحات" name="description" cols="55" rows="7"
+                                                      class="form-control"
+                                                      id="description<?php echo $row['id']; ?>">
 													 <?php echo $row['description']; ?>
 												</textarea>
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="submit" class="btn btn-primary btn-sm" name="action"
-                                                       value="update"/>
-                                                <input type="submit" class="btn btn-danger btn-sm" name="action"
-                                                       value="delete"/>
-                                                <input type="hidden" name="id" value="<?php echo $row['id']; ?>"/>
-                                            </div>
-                                        </form>
-                                        <hr>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="submit" class="action btn btn-primary btn-sm"
+                                                   onclick='send(this.value,<?php echo $row['id']; ?>)'
+                                                   id="<?php echo $row['id']; ?>"
+                                                   name="action" value="update"/>
+                                            <input type="submit" class="action btn btn-danger btn-sm"
+                                                   onclick='send(this.value,<?php echo $row['id']; ?>)'
+                                                   id="<?php echo $row['id']; ?>"
+                                                   name="action" value="delete"/>
+                                        </div>
                                     </div>
-									<?php
-                                    $i++;
-								};
-							}; ?>
-                        </div>
+                                    <hr>
+                                </div>
+                                <?php
+                                $i++;
+                            };
+                        }; ?>
                     </div>
                 </div>
             </div>
@@ -116,3 +135,33 @@ $result = $conn->query( $sql );
     </div>
 </div>
 </div>
+</div>
+<script>
+    function send(val, idd) {
+        let id = idd;
+        let postnam = $("#name" + idd).val();
+        let description = $("#description" + idd).val();
+        let alt = $("#alt" + idd).val();
+        let category = $("#category" + idd).val();
+        let price = $("#price" + idd).val();
+        let value = val;
+        $.ajax({
+            url: 'control_post.php',
+            type: 'post',
+            dataType: 'json',
+            data: {
+                'id': id,
+                'postnam': postnam,
+                'description': description,
+                'alt': alt,
+                'category': category,
+                'price': price,
+                'value': value
+            },
+            success: function (data) {
+            },
+        });
+        $("div#"+idd).css("display", "none");
+    }
+
+</script>

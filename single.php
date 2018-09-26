@@ -8,24 +8,24 @@ error_reporting( 0 );
 ini_set( 'display_errors', 0 );
 $id= $_GET['post'];
 secure($id);
-$sql    = "SELECT postnam,description,singleImg,alt FROM post WHERE id=$id";
+$sql    = "SELECT postnam,description,original_img,alt FROM post WHERE id='$id'";
 $result = $conn->query( $sql );
 if ( $result->num_rows > 0 ) {
-	$row = $result->fetch_assoc();
+    $row = $result->fetch_assoc();
 };
 ?>
 <div class="row">
     <div class="single">
         <div class="col">
             <div class="single-img">
-                <img src="<?php echo base_url . $row['singleImg']; ?>" alt="<?php echo $row['alt']; ?>">
+                <img src="<?php echo base_url . $row['original_img']; ?>" alt="<?php echo $row['alt']; ?>">
             </div>
         </div>
         <div class="col">
             <div class="single-content">
-                <h1 class="section-header"><?php echo $row['nam']; ?></h1>
+                <h1 class="section-header"><?php echo $row['postnam']; ?></h1>
                 <p>
-					<?php echo $row['description']; ?>
+                    <?php echo $row['description']; ?>
                 </p>
             </div>
         </div>

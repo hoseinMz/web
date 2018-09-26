@@ -32,6 +32,26 @@ session_start();
                 </ul>
             </div>
             <br>
+            <div class="dropdown show">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown link
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <?php
+                $sql2   = "SELECT link, title FROM topbar";
+                $result = $conn->query( $sql2 );
+
+                if ( $result->num_rows > 0 ) {
+                    // output data of each row
+                    while ( $row = $result->fetch_assoc() ) {
+                        ?>
+                        <a class="fa-md dropdown-item" href="<?php echo $row['link']; ?>"><?php echo $row["title"]; ?></a>
+
+                        <?php
+                    }
+                } ?>
+                </div>
+            </div>
             <div class="bar">
                 <ul>
                     <li>
