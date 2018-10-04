@@ -1,9 +1,9 @@
 <?php
-define('base_url', 'http://originalpal.info/');
+define('base_url', 'http://');
 $servername = "localhost";
-$database   = "origina9_shop";
-$username   = "origina9_bahman";
-$password   = "bahman13701121";
+$database   = "";
+$username   = "";
+$password   = "";
 global $config;
 $config['salt']="AzaZ.09wq@'mxzq[rtQSCVVFR%£erv";
 // Create connection
